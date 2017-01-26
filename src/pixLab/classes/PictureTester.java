@@ -21,7 +21,7 @@ public class PictureTester
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
-    Picture caterpillar = new Picture("caterpillar.jpg");
+    Picture caterpillar = new Picture("seagull.jpg");
     caterpillar.explore();
     caterpillar.mirrorVertical();
     caterpillar.explore();
@@ -33,6 +33,30 @@ public class PictureTester
 	  bike.explore();
 	  bike.mirrorVerticalRightToLeft();
 	  bike.explore();
+  }
+  public static void testMirrorDiagonal()
+  {
+	  Picture koala = new Picture("koala.jpg");
+	  koala.explore();
+	  koala.mirrorDiagonal();
+	  koala.explore();
+	  
+  }
+  
+  public static void testMirrorGull()
+  {
+	  Picture taco = new Picture("seagull.jpg");
+	  taco.mirrorGull();
+	  taco.explore();
+	  
+  }
+  
+  public static void testMirrorDiagonalUphill()
+  {
+	  Picture koala = new Picture("koala.jpg");
+	  koala.explore();
+	  koala.mirrorDiagonalUphill();
+	  koala.explore();
   }
   
   public static void testmirrorHorizantalBottomToTop()
@@ -67,6 +91,38 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
+  public static void testEdgeDetectionV2()
+  {
+    Picture swan = new Picture("swan.jpg");
+    swan.edgeDetection(15);
+    swan.explore();
+  }
+  public static void testfullRandom()
+  {
+	  Picture temple = new Picture("temple.jpg");
+	  temple.fullRandom();
+	  temple.explore();
+	  Picture temple1 = new Picture("temple.jpg");
+	  temple1.fullRandomBlue();
+	  temple1.explore();
+	  Picture temple2 = new Picture("temple.jpg");
+	  temple2.fullRandomGreen();
+	  temple2.explore();
+	  Picture temple3 = new Picture("temple.jpg");
+	  temple3.fullRandomrRed();
+	  temple3.explore();
+  }
+  public static void FiveFilters()
+  {
+	  Picture temple = new Picture("femaleLionAndHall.jpg");
+	  temple.fullRandomBlue();
+	  temple.mirrorDiagonal();
+	  temple.mirrorDiagonalUphill();
+	  temple.mirrorVertical();
+	  temple.edgeDetection(20);
+	  temple.explore();
+	  
+  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -84,7 +140,9 @@ public class PictureTester
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorVerticalRightToLeft();
-	  testmirrorHorizantalBottomToTop();
+	 // testmirrorHorizantalBottomToTop();
+	 // testMirrorDiagonal();
+	 // testMirrorDiagonalUphill();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
@@ -92,6 +150,7 @@ public class PictureTester
     //testCollage();
     //testCopy();
     //testEdgeDetection();
+    //testEdgeDetectionV2();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
@@ -99,5 +158,7 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
+	  //testfullRandom();
+	  FiveFilters();
   }
 }
