@@ -103,7 +103,7 @@ public class PictureTester
 	  temple.fullRandom();
 	  temple.explore();
 	  Picture temple1 = new Picture("temple.jpg");
-	  temple1.fullRandomBlue();
+	  temple1.Glitch();
 	  temple1.explore();
 	  Picture temple2 = new Picture("temple.jpg");
 	  temple2.fullRandomGreen();
@@ -115,13 +115,26 @@ public class PictureTester
   public static void FiveFilters()
   {
 	  Picture temple = new Picture("femaleLionAndHall.jpg");
-	  temple.fullRandomBlue();
+	  temple.Glitch();
 	  temple.mirrorDiagonal();
 	  temple.mirrorDiagonalUphill();
 	  temple.mirrorVertical();
 	  temple.edgeDetection(20);
 	  temple.explore();
 	  
+  }
+  public static void ValMeme()
+  {
+	  Picture ValMeme = new Picture("ValMeme.jpg");
+	  ValMeme.ValMeme();
+	  ValMeme.explore();
+	  ValMeme.write("ValentinesDayMeme!");
+  }
+  public static void TestGlitchArt()
+  {
+	  Picture temple = new Picture("temple");
+	  temple.GlitchArt();
+	  temple.explore();
   }
   
   /** Main method for testing.  Every class can have a main
@@ -158,7 +171,9 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
-	  //testfullRandom();
-	  FiveFilters();
+	 // testfullRandom();
+	  //FiveFilters();
+	  //ValMeme();
+	  TestGlitchArt();
   }
 }

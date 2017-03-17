@@ -350,7 +350,7 @@ public class Picture extends SimplePicture {
 		}
 	}
 
-	public void fullRandomBlue() {
+	public void Glitch() {
 		Pixel[][] currentPicture = this.getPixels2D();
 		for (Pixel[] row : currentPicture) {
 			for (Pixel currentPixel : row) {
@@ -359,12 +359,12 @@ public class Picture extends SimplePicture {
 				int green = currentPixel.getGreen();
 				try
 				{
-				red += 100;
-				green += 100;
+				red += 128;
+				green += 128;
 				currentPixel.setColor(new Color(red, green, blue));
 				}catch(Exception e){
-					red -= 100;
-					green -= 100;
+					red -= 128;
+					green -= 128;
 					currentPixel.setColor(new Color(red, green, blue));
 				}
 			}
@@ -386,6 +386,34 @@ public class Picture extends SimplePicture {
 	public void collage()
 	{
 		
+	}
+	public void ValMeme()
+	{
+		this.addMessage("Can I be my own ", 0, 10);
+		this.addMessage("valentine?", 0 , 25);
+		this.addMessage("Becasue no one", 0, 200);
+		this.addMessage("else deserves me.", 0, 215);
+		
+	}
+	public void GlitchArt() {
+		Pixel[][] currentPicture = this.getPixels2D();
+		for (Pixel[] row : currentPicture) {
+			for (Pixel currentPixel : row) {
+				int blue = (int) (Math.random() * 256);
+				int red = currentPixel.getRed();
+				int green = currentPixel.getGreen();
+				try
+				{
+				red += 128;
+				green += 128;
+				currentPixel.setColor(new Color(red, green, blue));
+				}catch(Exception e){
+					red -= 128;
+					green -= 128;
+					currentPixel.setColor(new Color(red, green, blue));
+				}
+			}
+		}
 	}
 
 } // this } is the end of class Picture, put all new methods before this
