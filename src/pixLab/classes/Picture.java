@@ -458,3 +458,4 @@ public class Picture extends SimplePicture {
 		}
 		this.explore();
 	}
+}
